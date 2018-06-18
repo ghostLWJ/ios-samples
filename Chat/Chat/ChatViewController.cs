@@ -150,7 +150,8 @@ namespace Chat
             if (UIDevice.CurrentDevice.CheckSystemVersion(11, 0))
             {   // iPhone X layout
 				var safeGuide = View.SafeAreaLayoutGuide;
-                toolbar.HeightAnchor.ConstraintEqualTo(44).Active = true;
+                toolbarHeightConstraint = toolbar.HeightAnchor.ConstraintEqualTo(44);
+                toolbarHeightConstraint.Active = true;
                 toolbar.LeadingAnchor.ConstraintEqualTo(safeGuide.LeadingAnchor).Active = true;
                 toolbar.TrailingAnchor.ConstraintEqualTo(safeGuide.TrailingAnchor).Active = true;
                 toolbarBottomConstraint = toolbar.BottomAnchor.ConstraintEqualTo(safeGuide.BottomAnchor);
